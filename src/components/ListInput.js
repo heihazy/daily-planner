@@ -2,24 +2,25 @@ import React, { useState } from "react";
 
 const ListInput = (props) => {
   const [enteredTask, setEnteredTask] = useState("");
-  const InputHandler = (e) => {
-    setEnteredTask({
-      ...enteredTask,
-      [e.target.name]: e.target.value,
-    });
+  const addTask = (e) => {
+    e.preventDefault();
+    props.setDailyTasks((currentTasks) => [...currentTasks, enteredTask]);
   };
-
+  const InputHandler = (e) => {
+    setEnteredTask(e.target.value);
+  };
   return (
     <div>
       <form>
         <input
           name="tasks"
-          id="tasks"
+          id="newTask"
           type="text"
           placeholder="Tasks"
+          value={enteredTask}
           onChange={InputHandler}
         />
-        <button onClick={props.onAddTasks} type="submit">
+        <button onClick={(e) => addTask(e)} type="submit">
           ADD
         </button>
       </form>
