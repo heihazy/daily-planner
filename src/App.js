@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from "react";
+import Header from "./components/Header";
+import ListInput from "./components/ListInput";
+import ListItem from "./components/ListItem";
+const App = () => {
+  const [dailyTasks, setDailyTasks] = useState([]);
+  const addTaskHandler = (taskText) => {
+    setDailyTasks((currentTasks) => [...currentTasks, { value: taskText }]);
+  };
+  const taskList = dailyTasks.map((task) => {
+    return <ListItem key={task} text={task} />;
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <ListInput onAddTasks={addTaskHandler} />
+      <div>{taskList}</div>
     </div>
   );
-}
+};
 
 export default App;
