@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj&display=swap");
+form {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 1fr;
+}
+.task {
+  padding: 1rem;
+  border-radius: 5px;
+  border-width: 1px;
+  font-family: "Taviraj", serif;
+}
+
+.task:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 241);
+}
+button {
+  border: none;
+  background-color: #8f8d8d;
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(12, 180, 12);
+  cursor: pointer;
+}
