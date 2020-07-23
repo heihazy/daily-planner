@@ -4,4 +4,13 @@ body {
   justify-items: center;
   align-items: center;
   font-family: "Taviraj", serif;
+  background-color: rgb(243, 222, 182);
+}
+
+.tasklist {
+  padding: 0;
+}
+
+.tasklist li {
+  margin: 25px 0;
 }

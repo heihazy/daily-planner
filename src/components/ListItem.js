@@ -2,25 +2,31 @@ import React from "react";
 import "../styling/ListItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 const ListItem = ({ text, remove }) => {
+  const toggleOverLine = (event) => {
+    const listElementText = event.target.nextSibling;
+    listElementText.style.textDecoration
+      ? (listElementText.style.textDecoration = "")
+      : (listElementText.style.textDecoration = "line-through");
+  };
+
   return (
-    <div className="item-wrapper">
-      <label htmlFor="item" className="wrapper">
-        {" "}
+    <li className="checkbox-row-wrapper">
+      <label htmlFor={text} className="list-item-wrapper">
         <input
           className="checkbox"
           type="checkbox"
-          name="tasks"
-          id="item"
-          checked="checked"
+          onChange={(event) => {
+            toggleOverLine(event);
+          }}
         />
-        <span className="checkmark"></span>
-        {text}
+        <span className="list-item-text">{text}</span>
       </label>
-      <button onClick={remove}>
+      <button onClick={remove} className="delete-button">
         <FontAwesomeIcon icon={faTrash} />
       </button>
-    </div>
+    </li>
   );
 };
 
