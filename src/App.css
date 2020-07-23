@@ -15,6 +15,7 @@ body {
 
 .tasklist {
   padding: 0;
+  width: 100%;
 }
 
 .tasklist li {
