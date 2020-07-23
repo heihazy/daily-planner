@@ -6,6 +6,8 @@ The project meets the requirements:
 - Data is saved in Firebase.
 - Project is hosted in [Firebase](https://dailyplanner-87df7.web.app/).
 
+In addition, the app is mobile friendly!
+
 ## Available Scripts
 
 In the project directory, you can run:
