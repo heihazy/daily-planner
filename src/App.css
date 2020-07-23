@@ -7,6 +7,12 @@ body {
   background-color: rgb(243, 222, 182);
 }
 
+.app {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
 .tasklist {
   padding: 0;
 }

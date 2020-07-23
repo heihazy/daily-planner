@@ -31,7 +31,7 @@ const App = () => {
   });
 
   return (
-    <div>
+    <div className="app">
       <Header />
       <ListInput />
       <ul className="tasklist">{taskList}</ul>
