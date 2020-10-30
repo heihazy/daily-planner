@@ -1,4 +1,3 @@
-This is an application requested from Globuzzer for an internship position.
 The project meets the requirements:
 
 - Built with React.js.
